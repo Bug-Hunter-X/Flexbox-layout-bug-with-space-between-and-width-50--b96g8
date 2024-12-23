@@ -1,0 +1,2 @@
+# Flexbox Layout Bug
+This repository demonstrates a layout bug encountered when using `justify-content: space-between` with flex children having a width set to 50%.  In some browsers, the layout does not evenly distribute the space between the items, causing unexpected results. This repo contains the buggy CSS (`bug.css`) and a solution (`bugSolution.css`).
