@@ -1,0 +1,13 @@
+The following CSS code causes an unexpected layout issue in some browsers:
+
+```css
+div {
+  display: flex;
+  justify-content: space-between;
+}
+div > span {
+  width: 50%;
+}
+```
+
+The expected behavior is that the two spans should divide the space equally. However, in some browsers, the second span is pushed to the end, creating extra space on the left side.
