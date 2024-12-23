@@ -1,0 +1,13 @@
+The issue is caused by the combination of `justify-content: space-between` and explicit width on the child elements. `space-between` distributes space *between* items, not *around* them. Since the width is fixed to 50%, the last item is pushed to the end.  The solution is to avoid setting the width of the child elements explicitly, or to use a different justification method. Here's a solution that works across different browsers:
+
+```css
+div {
+  display: flex;
+  justify-content: space-around;
+}
+div > span {
+  /*No need to set a width. Let flexbox handle it*/
+}
+```
+
+Alternatively, consider using `justify-content: space-evenly` which distributes space more evenly.  Note that `space-evenly` distributes space both between items and before the first and after the last item. 
